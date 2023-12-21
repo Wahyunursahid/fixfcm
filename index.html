@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4285f4">
+    <title>Firebase Web Push Notification</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="brewoknavia425.png" sizes="425x425" type="image/png"/>
+   
+</head>
+<body>
+    <h2>Firebase Web Push Notification Example</h2>
+  <div  class="sendNotification">
+    <div>
+      <label for="title">Title:</label>
+      <input type="text" id="title" value="Cintai Produk Lokal,Bersama UMKM Mari Kita Majukan INDONESIA ">
+    </div>
+    <div>
+      <label for="icon">Icon:</label>
+      <input type="text" id="icon" value="/produk/tutupbagor.jpeg">
+    </div>
+    <div>
+        <label for="message">Message:</label>
+        <input type="text" id="message" value="NUMPANG IKLAN BENTAR YGY">
+    </div>
+  </div>
+  <div class="send">
+    <button id="sendButton" onclick="sendNotification()">Send Notification</button>
+</div>
+    <p id="token"></p>
+
+    <div class="container">
+      <div class="left-column">
+          <h1>Wahyu Nursahid</h1>
+          <p>NIM: 21195023</p>
+          <p>Kelas: Regular Pagi / TI</p>
+          <p>Semester: 5</p>
+          <p>Mata Kuliah: Pemrograman Berbasis Mobile</p>
+          <p>Deskripsi: Belajar Mobile Programming PWA(Progressive Web App)</p>
+          <p>Follow me:</p>
+                <ul>
+                <li><a href="https://api.whatsapp.com/send?phone=6285728339066" target="_blank">WhatsApp</a></li>
+                <li><a href="https://github.com/Wahyunursahid/firebase-cloud-messaging-PWA.git" target="_blank">GitHub</a></li>
+                <li><a href="https://www.google.com/maps?q=jl.kh.ahmad+dahlan+no.37+pasarbatang,brebes" target="_blank">Location</a></li>
+                </ul>
+          
+      </div>
+      <div class="right-column">
+          <img src="/brewoknavia425.png" alt="Foto Anda">
+      </div>
+  </div>
+  
+  <!-- Tambahkan form komentar -->
+<div class="komentar">
+  <form id="comment-form">
+      <div>
+          <label for="name-input">Nama:</label>
+          <input type="text" id="name-input" placeholder="Nama">
+      </div>
+      <div>
+          <label for="email-input">Email:</label>
+          <input type="email" id="email-input" placeholder="Email">
+      </div>
+      <div>
+          <label for="comment-input">Komentar:</label>
+          <textarea  id="comment-input" placeholder="Kirim komentar"></textarea>
+      </div>
+      <button type="submit">Kirim</button>
+  </form>
+  
+  <!-- Menampilkan semua komentar yang disimpan di database -->
+  <div id="all-comments">
+      <h2>Semua Komentar:</h2>
+      <ul id="all-comments-list"></ul>
+  </div>
+</div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-messaging.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
